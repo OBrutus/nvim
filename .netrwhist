@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/eccentricstar/Workspace/node/socket.io/learn/SampleChat'
+let g:netrw_dirhist_8='/home/eccentricstar/Workspace/node/socket.io/learn'
+let g:netrw_dirhist_7='/home/eccentricstar/Workspace/node/socket.io/learn/SampleChat'
+let g:netrw_dirhist_6='/home/eccentricstar/Workspace/node/socket.io/learn'
+let g:netrw_dirhist_5='/home/eccentricstar/Workspace/node/socket.io/learn/SampleChat'
+let g:netrw_dirhist_4='/home/eccentricstar/Workspace/node/socket.io/learn'
+let g:netrw_dirhist_3='/home/eccentricstar/Workspace/node/socket.io/learn/SampleChat'
 let g:netrw_dirhist_2='/home/eccentricstar/Workspace/node/socket.io/learn'
 let g:netrw_dirhist_1='/home/eccentricstar/.config/nvim'
