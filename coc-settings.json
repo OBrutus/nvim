@@ -7,6 +7,10 @@
     "typescript",
     "typescriptreact"
   ],
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "•",
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true
 }
