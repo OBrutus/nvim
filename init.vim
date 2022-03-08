@@ -1,5 +1,3 @@
-""" Optixal's Neovim Init.vim
-
 """ Vim-Plug
 call plug#begin()
 
@@ -16,6 +14,7 @@ Plug 'junegunn/vim-journal'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'nightsense/forgotten'
 Plug 'zaki/zazen'
+Plug 'tc50cal/vim-terminal' 
 
 " Aethetics - Additional
 Plug 'nightsense/nemo'
@@ -73,6 +72,16 @@ set number
 set title
 set mouse=a
 
+""" Self shortcuts
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <F2>  :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap <C-t> :tabedit untitled<CR>
+nnoremap <C-w> :q<CR> 
+nnoremap <C-s> :w<CR>
+nnoremap <F12> :TerminalSplit bash<CR>
+
 """ Coloring
 
 " Functions and autocmds to run whenever changing colorschemes
@@ -96,7 +105,7 @@ augroup END
 
 " Main Coloring Configurations
 syntax on
-color dracula
+" color dracula
 
 " Enable True Color Support (ensure you're using a 256-color enabled $TERM, e.g. xterm-256color)
 set termguicolors
