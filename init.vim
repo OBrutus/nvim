@@ -51,8 +51,13 @@ Plug 'psliwka/vim-smoothie'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'wellle/context.vim'
 
+" Media
+Plug 'edluffy/hologram.nvim'
+
 " Entertainment
 Plug 'dansomething/vim-hackernews'
+
+Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
 
