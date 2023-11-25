@@ -1,3 +1,5 @@
+""" Optixal's Neovim Init.vim
+
 """ Vim-Plug
 call plug#begin()
 
@@ -5,7 +7,7 @@ call plug#begin()
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bryanmylee/vim-colorscheme-icons'
+" Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -14,7 +16,6 @@ Plug 'junegunn/vim-journal'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'nightsense/forgotten'
 Plug 'zaki/zazen'
-Plug 'tc50cal/vim-terminal' 
 
 " Aethetics - Additional
 Plug 'nightsense/nemo'
@@ -26,7 +27,7 @@ Plug 'rhysd/vim-color-spring-night'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar.git'
+Plug 'preservim/tagbar.git'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
@@ -51,14 +52,6 @@ Plug 'psliwka/vim-smoothie'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'wellle/context.vim'
 
-" Media
-Plug 'edluffy/hologram.nvim'
-
-" Entertainment
-Plug 'dansomething/vim-hackernews'
-
-Plug 'nvim-lua/plenary.nvim'
-
 call plug#end()
 
 """ Main Configurations
@@ -76,16 +69,6 @@ set hidden
 set number
 set title
 set mouse=a
-
-""" Self shortcuts
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <F2>  :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
-nnoremap <C-t> :tabedit untitled<CR>
-nnoremap <C-w> :q<CR> 
-nnoremap <C-s> :w<CR>
-nnoremap <F12> :TerminalSplit bash<CR>
 
 """ Coloring
 
@@ -110,7 +93,8 @@ augroup END
 
 " Main Coloring Configurations
 syntax on
-" color dracula
+" To change the color use command color and hit tab (eg: color default)
+color dracula
 
 " Enable True Color Support (ensure you're using a 256-color enabled $TERM, e.g. xterm-256color)
 set termguicolors
@@ -361,7 +345,6 @@ nmap <leader>e3 :call ColorForgotten()<CR>
 nmap <leader>e4 :call ColorZazen()<CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
-nmap <leader>y <C-w>v<C-w>l:HackerNews best<CR>J
 nmap <leader>p <Plug>(pydocstring)
 xmap <leader>a gaip*
 nmap <leader>a gaip*
