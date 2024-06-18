@@ -14,11 +14,9 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-journal'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'nightsense/forgotten'
 Plug 'zaki/zazen'
 
 " Aethetics - Additional
-Plug 'nightsense/nemo'
 Plug 'yuttie/hydrangea-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'rhysd/vim-color-spring-night'
@@ -27,7 +25,6 @@ Plug 'rhysd/vim-color-spring-night'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar.git'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
@@ -138,9 +135,6 @@ let g:indentLine_defaultGroup = 'NonText'
 let g:vim_json_syntax_conceal = 0
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
-
-" TagBar
-let g:tagbar_width = 30
 
 " fzf-vim
 let g:fzf_action = {
@@ -337,7 +331,6 @@ nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>q :NERDTreeToggle<CR>
 nmap \\ <leader>q
-nmap <leader>w :TagbarToggle<CR>
 nmap \| <leader>w
 nmap <leader>ee :Colors<CR>
 nmap <leader>ea :AirlineTheme 
