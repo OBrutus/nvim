@@ -52,6 +52,11 @@ Plug 'wellle/context.vim'
 " Entertainment
 Plug 'dansomething/vim-hackernews'
 
+" Go Lang based plugins
+Plug 'neovim/nvim-lspconfig'
+Plug 'ray-x/go.nvim'
+" Plug 'ray-x/guihua.lua' ; recommended if need floating window support
+
 call plug#end()
 
 """ Main Configurations
