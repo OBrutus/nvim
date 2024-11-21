@@ -53,6 +53,7 @@ Plug 'wellle/context.vim'
 Plug 'dansomething/vim-hackernews'
 
 " Go Lang based plugins
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/go.nvim'
 " Plug 'ray-x/guihua.lua' ; recommended if need floating window support
@@ -360,5 +361,55 @@ nmap <leader>l :Limelight!!<CR>
 xmap <leader>l :Limelight!!<CR>
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
 nmap <silent> <leader><leader> :noh<CR>
-nmap <Tab> :bnext<CR>
+"""  nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
+
+" Custom functions
+
+" Function to enable transparent mode
+function! SetTransparentMode()
+  " Make the Normal highlight group transparent
+  hi Normal guibg=NONE ctermbg=NONE
+  hi NormalNC guibg=NONE ctermbg=NONE " Optional for inactive windows
+  echo "Transparent mode enabled!"
+endfunction
+
+" Command to call the transparent mode function
+command! SetTransparent call SetTransparentMode()
+
+" Function to disable transparent mode
+function! SetNonTransparentMode()
+  hi Normal guibg=#1e1e1e ctermbg=0 " Replace #1e1e1e with your preferred background color
+  hi NormalNC guibg=#1e1e1e ctermbg=0 " For inactive windows
+  echo "Non-transparent mode enabled!"
+endfunction
+
+" Command to disable transparent mode
+command! SetNonTransparent call SetNonTransparentMode()
+
+
+" Function to display custom help content
+function! ShowCustomHelp()
+  " Open a new scratch buffer
+  new
+  " Set buffer options for a scratch buffer
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
+  setlocal noswapfile
+  " Add custom help content
+  call append(0, [
+        \ '=== Custom Neovim Help ===',
+        \ 'By Aniket Vaishnav',
+        \ '1. :SetTransparentMode - Enable transparent mode and run a custom command. done by -> hi Normal guibg=NONE ctermbg=NONE',
+        \ '2. :AnotherCommand - Description of another custom command.',
+        \ '3. Press q to close this help window.',
+        \ ''
+        \ ])
+  " Make the buffer read-only and map 'q' to close it
+  setlocal readonly
+  nnoremap <buffer> q :bd!<CR>
+endfunction
+
+" Command to display the custom help
+command! ShowHelp call ShowCustomHelp()
+
